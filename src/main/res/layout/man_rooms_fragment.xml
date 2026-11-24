@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/pageHeader"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="#173650"
+        android:gravity="center"
+        android:text="SHARED SPACES"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/pageScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/pageHeader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="ALL ROOMS"
+                android:textColor="#173650"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="View vacant and booked rooms"
+                android:textColor="#657789"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="#4D8CCB"
+                android:paddingLeft="10dp"
+                android:text="FILTER: All | Meeting | Seminar"
+                android:textColor="#173650"
+                android:gravity=""
+                android:textStyle="bold"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#DDF2E2"
+                android:text="Meeting Room 1"
+                android:textColor="#263746"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#FFF0CE"
+                android:text="Meeting Room 2"
+                android:textColor="#263746"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#DDF2E2"
+                android:text="Meeting Room 3"
+                android:textColor="#263746"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#FFF0CE"
+                android:text="Meeting Room 4"
+                android:textColor="#263746"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#FFF0CE"
+                android:text="Meeting Room 5"
+                android:textColor="#263746"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#DDF2E2"
+                android:text="Seminar Room 1"
+                android:textColor="#263746"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#FFF0CE"
+                android:text="Seminar Room 2"
+                android:textColor="#263746"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="#F1F4F7"
+                android:paddingLeft="10dp"
+                android:text="Select a room for details"
+                android:textColor="#173650"
+                android:textStyle="normal"
+                android:gravity=" "
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F1F4F7"
+                android:text=" Home room booking profile"
+                android:textColor="#263746"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
