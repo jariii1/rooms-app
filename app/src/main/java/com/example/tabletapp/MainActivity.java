@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.tabletapp.session.SessionManager;
 import com.example.tabletapp.ui.employee.employeeHomeFragment;
 import com.example.tabletapp.ui.employee.employeeSigninFragment;
 import com.example.tabletapp.ui.employee.findAvailabilityFragment;
@@ -18,6 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private SessionManager session;
     private BottomNavigationView bottomNav;
 
     @Override
@@ -43,9 +45,16 @@ public class MainActivity extends AppCompatActivity {
             return false;
         });
 
+        session = new SessionManager(this);// reads the phone storage for saved login
+
         // First time the app opens, show sign-in
         if (savedInstanceState == null) {
-            showSignIn();
+            if (session.isLoggedIn()){
+                showEmployeeHome();
+            }else {
+                showSignIn();
+            }
+
         }
     }
 

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,7 +29,22 @@ public class employeeSigninFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         MainActivity activity = (MainActivity) requireActivity();
 
-        view.findViewById(R.id.btnSignIn).setOnClickListener(v ->
-                activity.showEmployeeHome());
+        EditText etEmail = view.findViewById(R.id.etEmail);
+        EditText etPassword = view.findViewById(R.id.etPassword);
+
+        view.findViewById(R.id.btnSignIn).setOnClickListener(v ->{
+
+            //read the text and remove spaces start and end of email
+            String email = etEmail.getText().toString().trim();
+            String password = etPassword.getText().toString();
+
+            //stop if a field is empty
+            if (email.isEmpty() || password.isEmpty()){
+                Toast.makeText(requireContext(),
+                        "Enter your email or password", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            activity.showEmployeeHome();
+        });
     }
 }
